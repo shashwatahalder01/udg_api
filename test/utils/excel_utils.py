@@ -8,6 +8,12 @@ def get_row_count(file, sheet_name):
     return sheet.max_row
 
 
+def get_row_count_specific_column(file, sheet_name, row):
+    workbook = openpyxl.load_workbook(file)
+    sheet = workbook[sheet_name]
+    return len(sheet[row])
+
+
 def get_col_count(file, sheet_name):
     workbook = openpyxl.load_workbook(file)
     sheet = workbook[sheet_name]
@@ -98,7 +104,8 @@ def merge_cell(file, sheet_name, starting_merge_cell, ending_merge_cell, row_num
     wb.save(file)
 
 
-def write_in_merged_cell(file, sheet_name, starting_merge_cell, ending_merge_cell, row_num, col_num, starting_col, data):
+def write_in_merged_cell(file, sheet_name, starting_merge_cell, ending_merge_cell, row_num, col_num, starting_col,
+                         data):
     merge_cell(file, sheet_name, starting_merge_cell, ending_merge_cell, row_num, starting_col + 1)
     write_single_row(file, sheet_name, row_num, col_num, starting_col, data)
 

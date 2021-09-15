@@ -2,7 +2,7 @@ import json
 from utils.user_credential_utils import new_user_generate, read_user_credential
 
 new_user = new_user_generate()
-users = read_user_credential()
+# users = read_user_credential()
 # new_user = users[0]
 
 # parameter get request
