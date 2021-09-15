@@ -6,7 +6,7 @@ from testdata.parameters_and_payload import *
 
 response = requests.request("POST", signup_endpoint, headers=headers_post, data=payload_user_credential_201_signup)
 response_body = response.json()
-print(response_body)
+# print(response_body)
 
 # response = ''
 # response_body = ''

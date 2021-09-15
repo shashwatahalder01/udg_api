@@ -10,3 +10,23 @@ def test_c005_01_status_code_is_200():
 @allure.step("Logged_in user details, body not none validation")
 def test_c005_02_response_body_not_none():
     assert response_body is not None
+
+
+@allure.step("Logged_in user details, body field user validation")
+def test_c001_03_body_field_user():
+    assert 'user' in response_body
+
+
+@allure.step("Logged_in user details, body field id validation")
+def test_c001_03_body_field_id():
+    assert 'id' in response_body['user']
+
+
+@allure.step("Logged_in user details, body field email validation")
+def test_c001_03_body_field_email():
+    assert 'email' in response_body['user']
+
+
+@allure.step("Logged_in user details, body field iat validation")
+def test_c001_03_body_field_iat():
+    assert 'iat' in response_body['user']
