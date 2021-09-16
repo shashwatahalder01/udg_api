@@ -29,3 +29,25 @@ payload_user_credential_400 = json.dumps({
     "email": "",
     "password": "Asdfgh123!"
 })
+
+# sign_in api payloads
+
+payload_signin_with_only_email = json.dumps({
+    "email": "user@mail.com",
+    "password": ""
+})
+
+payload_signin_with_only_password = json.dumps({
+    "email": "",
+    "password": "Asdfgh123!"
+})
+
+payload_signin_without_email_password = json.dumps({
+    "email": "",
+    "password": ""
+})
+
+payload_signin_with_valid_email_password = json.dumps({
+    "email": "user@mail.com",
+    "password": "ndsfGjJdf4325sg"
+})
