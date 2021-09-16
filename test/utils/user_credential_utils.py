@@ -1,5 +1,4 @@
 from pathlib import Path
-# from random import randint
 from utils.excel_utils import *
 import uuid
 
@@ -15,21 +14,10 @@ def read_user_credential():
 
 
 def new_user_generate():
-    # new_site_name = f"user_{randint(0, 9999999999)}@mail.com"
     new_site_name = f"user_{uuid.uuid1()}@mail.com"
     return new_site_name
 
 
-# def write_new_user_credential():
-#     users = []
-#     for i in range(10):
-#         users.append(new_user_generate())
-#     # print(*users,sep='\n')
-#     write_single_col(user_file, sheet_name, len(users), 1, 2, users)
-
 def write_new_valid_user_credential(user):
     writing_row = get_row_count(user_file, sheet_name) + 1
     write_single_row(user_file, sheet_name, writing_row, 2, 0, user)
-
-
-
