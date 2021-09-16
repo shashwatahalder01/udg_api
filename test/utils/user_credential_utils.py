@@ -1,6 +1,6 @@
 from pathlib import Path
-from random import randint
-from utils.excel_utils import read_single_col_open_file_once, get_row_count, write_single_col,get_row_count_specific_column, write_data
+# from random import randint
+from utils.excel_utils import *
 import uuid
 
 user_file = Path(__file__).parent.parent / 'data/user_credentials.xlsx'
@@ -29,8 +29,7 @@ def new_user_generate():
 
 def write_new_valid_user_credential(user):
     writing_row = get_row_count(user_file, sheet_name) + 1
-    # print(writing_row)
-    write_data(user_file, sheet_name, writing_row, 1, user)
+    write_single_row(user_file, sheet_name, writing_row, 2, 0, user)
 
 
 

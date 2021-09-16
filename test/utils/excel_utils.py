@@ -8,10 +8,10 @@ def get_row_count(file, sheet_name):
     return sheet.max_row
 
 
-def get_row_count_specific_column(file, sheet_name, row):
+def get_row_count_specific_column(file, sheet_name, col):
     workbook = openpyxl.load_workbook(file)
     sheet = workbook[sheet_name]
-    return len(sheet[row])
+    return len(sheet[col])
 
 
 def get_col_count(file, sheet_name):

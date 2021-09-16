@@ -12,7 +12,7 @@ response_body = response.json()
 # Write valid user to excel
 if response.status_code == 201:
     # print(new_user)
-    write_new_valid_user_credential(new_user)
+    write_new_valid_user_credential([new_user, "Asdfgh123!"])
 
 # response = ''
 # response_body = ''
