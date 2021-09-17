@@ -1,10 +1,10 @@
 import allure
-from testdata.signin_api.data_signin_with_post_request import response, response_body
+from testdata.signup_api.data_signup_with_post_request import response, response_body
 
 
 @allure.step('Signin api, status code validation')
-def test_c115_01_status_code_is_200():
-    assert response.status_code == 200
+def test_c115_01_status_code_is_201():
+    assert response.status_code == 201
 
 
 @allure.step("Signin api, body not none validation")

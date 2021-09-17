@@ -1,5 +1,5 @@
 import allure
-from testdata.signin_api.data_signin_without_email_password import response, response_body
+from testdata.signup_api.data_signup_without_email_password import response, response_body
 
 
 @allure.step('Signin api, status code validation')
@@ -24,7 +24,7 @@ def test_c114_04_required_field_email():
 
 @allure.step("Signin api, error message validation")
 def test_c114_05_error_message():
-    assert response_body['errors'][1]["message"] == "You must supply a password"
+    assert response_body['errors'][1]["message"] == "Password must be 8 character long"
 
 
 @allure.step("Signin api, required field password validation")

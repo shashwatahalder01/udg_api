@@ -5,4 +5,4 @@ from testdata.parameters_and_payload import payload_with_only_email
 
 response = requests.request("POST", sign_in_endpoint, headers=headers_post, data=payload_with_only_email)
 response_body = response.json()
-print(response_body)
+# print(response_body)

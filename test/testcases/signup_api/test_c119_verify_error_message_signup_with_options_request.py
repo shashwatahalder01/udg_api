@@ -1,5 +1,5 @@
 import allure
-from testdata.signin_api.data_signin_with_options_request import response, response_body
+from testdata.signup_api.data_signup_with_options_request import response, response_body
 
 
 @allure.step('Signin api, status code validation')

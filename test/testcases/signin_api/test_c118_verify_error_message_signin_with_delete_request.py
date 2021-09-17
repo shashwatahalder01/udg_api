@@ -13,5 +13,5 @@ def test_c118_02_response_body_not_none():
 
 
 @allure.step("Signin api, error message validation")
-def test_c118_02_error_message():
+def test_c118_03_error_message():
     assert response_body['errors'][0]["message"] == "Not found"

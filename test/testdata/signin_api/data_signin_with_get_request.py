@@ -6,4 +6,4 @@ from testdata.parameters_and_payload import payload_with_fixed_valid_email_passw
 response = requests.request("GET", sign_in_endpoint, headers=headers_post, data=payload_with_fixed_valid_email_password)
 # response = requests.request("GET", sign_in_endpoint, headers=headers_post, params=payload_signin_with_valid_email_password)
 response_body = response.json()
-print(response_body)
+# print(response_body)

@@ -1,5 +1,5 @@
 import allure
-from testdata.signin_api.data_signin_with_get_request import response, response_body
+from testdata.signup_api.data_signup_with_get_request import response, response_body
 
 
 @allure.step('Signin api, status code validation')
@@ -13,5 +13,5 @@ def test_c116_02_response_body_not_none():
 
 
 @allure.step("Signin api, error message validation")
-def test_c116_02_error_message():
+def test_c116_03_error_message():
     assert response_body['errors'][0]["message"] == "Not found"
