@@ -1,5 +1,5 @@
 import os
-from utils.uitls_function import read_date, read_and_update_counter, keep_reports
+from uitls_function import read_date, read_and_update_counter, keep_reports
 
 report_folder_name = f"{read_date()}_{read_and_update_counter()}"
 
